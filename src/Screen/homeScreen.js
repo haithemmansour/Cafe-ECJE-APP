@@ -9,7 +9,7 @@ import {
     Dimensions
 } from "react-native";
 
-import Category from './src/Screen/Category';
+import Category from './Category';
 
 const { height, width } = Dimensions.get('window');
 
@@ -25,7 +25,7 @@ export default class homeScreen extends Component {
     render() {
         return (
           
-           <ImageBackground source={require('./src/assets/back.jpeg')} style={styles1.image}>
+           <ImageBackground source={require('../assets/back.jpeg')} style={styles1.image}>
                     
                     
                         <View style={{ flex: 1, paddingTop: 20 ,alignContent :'center'}}>
@@ -38,13 +38,13 @@ export default class homeScreen extends Component {
                                     horizontal={true}
                                     showsHorizontalScrollIndicator={false}
                                 >
-                                    <Category imageUri={require('./src/assets/1.jpg')}
+                                    <Category imageUri={require('../assets/1.jpg')}
                                         name="Home"
                                     />
-                                    <Category imageUri={require('./src/assets/2.jpeg')}
+                                    <Category imageUri={require('../assets/2.jpeg')}
                                         name="Experiences"
                                     />
-                                    <Category imageUri={require('./src/assets/3.jpeg')}
+                                    <Category imageUri={require('../assets/3.jpeg')}
                                         name="Resturant"
                                     />
                                 </ScrollView>
@@ -60,7 +60,7 @@ export default class homeScreen extends Component {
                                 <View style={{ width: width - 40, height: 200, marginTop: 20 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={require('./src/assets/1.jpg')}
+                                        source={require('../assets/1.jpg')}
                                     />
 
                                 </View>
