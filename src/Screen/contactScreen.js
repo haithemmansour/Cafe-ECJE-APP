@@ -8,17 +8,20 @@ import {
     ImageBackground
 } from "react-native";
 import { Button } from 'react-native-paper';
-
+import { Header } from 'react-native-elements';
 class Contact extends Component {
     render() {
         return (
            <ImageBackground source={require('../assets/back.jpeg')} style={styles1.image}>
+           
             
             <View style={styles.container}>
             
-               <Text style={{ fontSize: 24, fontWeight: '700'}}>
-                                Contact
-                  </Text> 
+            <Header style={{ color: '#2A0F5B'} }
+            leftComponent={{ icon: 'menu', color: '#2A0F5B' }}
+            centerComponent={{ text: 'Contact', style: { color: '#2A0F5B' } }}
+            rightComponent={{ icon: 'home', color: '#2A0F5B' }}
+          />
                 
             </View>
             <View style={styles.container}>

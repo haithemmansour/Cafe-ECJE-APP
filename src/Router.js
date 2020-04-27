@@ -12,12 +12,14 @@ import contactScreen from './Screen/contactScreen';
 
 export default class Router extends React.Component {
   state = {
-    index: 0,
+    index: 2,
     routes: [
       { key: 'Home', title: 'Home', icon: props => <Image source={require('./assets/home.png')}
       style={{ width: 20, height: 20, tintColor: 'red' }}  /> },
-      { key: 'Settings', title: 'Settings', icon: 'shopping-cart' },
-      { key: 'Login', title: 'Login', icon: 'history' },
+      { key: 'Settings', title: 'Settings', icon: props => <Image source={require('./assets/notification.png')}
+      style={{ width: 20, height: 20, tintColor: 'red' }}  /> },
+      { key: 'Login',  icon: props => <Image source={require('./assets/login.png')}
+      style={{ width: 20, height: 20, tintColor: 'red' }}  /> },
       { key: 'Menu', title: 'Menu', icon: props => <Image source={require('./assets/menu.png')}
       style={{ width: 20, height: 20, tintColor: 'red' }}  /> }, 
       { key: 'Contact', title: 'Contact', icon: props => <Image source={require('./assets/contact.png')}
@@ -28,10 +30,11 @@ export default class Router extends React.Component {
   _handleIndexChange = index => this.setState({ index });
 
   _renderScene = BottomNavigation.SceneMap({
+    Login: loginScreen,
     Home: homeScreen,
     Settings: settingScreen,
-    Login: loginScreen,
     Menu:menuScreen,
+    Contact:contactScreen,
   });
 
   render() {

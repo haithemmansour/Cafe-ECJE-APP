@@ -8,6 +8,7 @@ import {
     Image,
     Dimensions
 } from "react-native";
+import { Header } from 'react-native-elements';
 
 import Category from './Category';
 
@@ -27,11 +28,13 @@ export default class homeScreen extends Component {
           
            <ImageBackground source={require('../assets/back.jpeg')} style={styles1.image}>
                     
-                    
+                       <Header style={{ color: '#2A0F5B'} }
+                        leftComponent={{ icon: 'menu', color: '#2A0F5B' }}
+                        centerComponent={{ text: 'Café-Restaurant junior', style: { color: '#2A0F5B' } }}
+                        rightComponent={{ icon: 'home', color: '#2A0F5B' }}
+                      />
                         <View style={{ flex: 1, paddingTop: 20 ,alignContent :'center'}}>
-                            <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
-                                Café Junior
-                            </Text>
+                     
 
                             <View style={{ height: 130, marginTop: 20 }}>
                             <ScrollView
@@ -50,7 +53,7 @@ export default class homeScreen extends Component {
                                 </ScrollView>
                             </View>
                             <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
-                                <Text style={{ fontSize: 24, fontWeight: '700' }}>
+                                <Text style={{ fontSize: 24, fontWeight: '700', color: '#2A0F5B' }}>
                                     Visiter notre café 
                                 </Text>
                                 <Text style={{ fontWeight: '100', marginTop: 10 }}>
