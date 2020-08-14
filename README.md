@@ -1,2 +1,3 @@
 # Cafe
-café-restaurant junior App
+une application mobile pour une Salon de thé avec React-Native
+
